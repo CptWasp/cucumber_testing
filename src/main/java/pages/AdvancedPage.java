@@ -9,4 +9,8 @@ public class AdvancedPage {
     public void clickSettingSpan(){
         $(By.xpath("//span[text()='Настроить']")).click();
     }
+
+
+
+
 }
