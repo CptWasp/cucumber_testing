@@ -2,6 +2,9 @@ package pages;
 
 import com.codeborne.selenide.SelenideElement;
 import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
+import org.openqa.selenium.WebElement;
+
 
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
@@ -12,19 +15,28 @@ import static com.codeborne.selenide.Selenide.$;
 public class ModalPage {
 
     private SelenideElement submissionDate1Input = $(By.xpath("(//div[text()='ПОДАЧА ЗАЯВОК']/parent::*//input[@class='datepicker'])[1]"));
-    private SelenideElement submissionDate2Input = $(By.xpath("(//div[text()='ПОДАЧА ЗАЯВОК']/parent::*//input[@class='datepicker'])[2]"));
-
+    private SelenideElement submissionDate2Input = $(By.xpath("(//div[text()='ПОДАЧА ЗАЯВОК']/parent::*//input[@class='datepicker'])[1]"));
+    private SelenideElement body = $(By.xpath("//*"));
 
     public void selectDate(String date1){
         $(By.xpath("//div[text()='Фильтры по датам']")).click();
         submissionDate1Input.val(date1);
+        body.sendKeys(Keys.ENTER);
 
         Date date = new Date(System.currentTimeMillis());
         DateFormat dateFormat = new SimpleDateFormat("dd-MM-yyyy");
         dateFormat.format(date);
         submissionDate2Input.val(dateFormat.format(date));
 
+        try {
+            Thread.sleep(4000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+
     }
+
+
 
 
     public void selectRegion(){
