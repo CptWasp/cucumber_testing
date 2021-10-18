@@ -38,6 +38,11 @@ public class ModalPage {
     }
 
 
+    public void search(){
+        $(By.xpath("//*[@class='search__btn bottomFilterSearch']")).click();
+    }
+
+
 
     public void selectRegion(){
         $(By.xpath("//div[text()='Регион поставки']")).click();

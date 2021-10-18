@@ -8,6 +8,11 @@ public class ModalPageDef {
 
 
 
+    @Then("Search")
+    public void search(){
+        modalPage.search();
+    }
+
 
     @Then("Exit date time setting modal")
     public void exitDateTimeSettingModal(){
