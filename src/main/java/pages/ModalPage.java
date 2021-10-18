@@ -13,6 +13,7 @@ import java.util.Date;
 import static com.codeborne.selenide.Selenide.$;
 
 public class ModalPage {
+    private String todayIs = "";
 
     private SelenideElement submissionDate1Input = $(By.xpath("(//div[text()='ПОДАЧА ЗАЯВОК']/parent::*//input[@class='datepicker'])[1]"));
     private SelenideElement submissionDate2Input = $(By.xpath("(//div[text()='ПОДАЧА ЗАЯВОК']/parent::*//input[@class='datepicker'])[1]"));
@@ -28,14 +29,13 @@ public class ModalPage {
         dateFormat.format(date);
         submissionDate2Input.val(dateFormat.format(date));
 
-        try {
-            Thread.sleep(4000);
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
+
 
     }
 
+    public void exitDatetimeSettingModal(){
+        $(By.xpath("//*")).click();
+    }
 
 
 

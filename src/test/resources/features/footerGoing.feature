@@ -8,3 +8,4 @@ Feature: Going to the site footer and click the link
     Then Clear checkboxes
     Then Select region
     Then Set date time "01-10-2021"
+    Then Exit date time setting modal
