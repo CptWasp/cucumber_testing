@@ -45,8 +45,12 @@ public class ModalPage {
 
 
     public void selectRegion(){
+        $(By.xpath("(//div[@class='modal-settings-section'])[3]//a[text()='Снять всё']")).click();
         $(By.xpath("//div[text()='Регион поставки']")).click();
-        $(By.xpath("//div[text()='Алтайский край']")).click();
+        $(By.xpath("(//div[@class='modal-settings-section'])[7]//a[text()='Снять всё']")).click();
+        $(By.xpath("//label[text()='Алтайский край']")).click();
+
+
     }
 
 
