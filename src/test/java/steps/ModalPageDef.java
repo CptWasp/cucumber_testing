@@ -14,11 +14,6 @@ public class ModalPageDef {
     }
 
 
-    @Then("Exit date time setting modal")
-    public void exitDateTimeSettingModal(){
-        modalPage.exitDatetimeSettingModal();
-    }
-
     @Then("Set date time {string}")
     public void setDateTime(String dateTime){
         modalPage.selectDate(dateTime);

@@ -8,5 +8,5 @@ Feature: Going to the site footer and click the link
     Then Clear checkboxes
     Then Select region
     Then Set date time "01-06-2021"
-    Then Exit date time setting modal
     Then Search
+    Then Show prices

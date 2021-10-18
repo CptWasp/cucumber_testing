@@ -16,25 +16,22 @@ public class ModalPage {
     private String todayIs = "";
 
     private SelenideElement submissionDate1Input = $(By.xpath("(//div[text()='ПОДАЧА ЗАЯВОК']/parent::*//input[@class='datepicker'])[1]"));
-    private SelenideElement submissionDate2Input = $(By.xpath("(//div[text()='ПОДАЧА ЗАЯВОК']/parent::*//input[@class='datepicker'])[1]"));
-    private SelenideElement body = $(By.xpath("//*"));
+    private SelenideElement submissionDate2Input = $(By.xpath("(//div[text()='ПОДАЧА ЗАЯВОК']/parent::*//input[@class='datepicker'])[2]"));
+//    private SelenideElement submissionDate2Input = $(By.xpath("(//div[text()='ПОДАЧА ЗАЯВОК']/parent::*//input[@class='datepicker'])[1]"));
 
     public void selectDate(String date1){
         $(By.xpath("//div[text()='Фильтры по датам']")).click();
         submissionDate1Input.val(date1);
-        body.sendKeys(Keys.ENTER);
-
+        submissionDate1Input.sendKeys(Keys.ENTER);
         Date date = new Date(System.currentTimeMillis());
-        DateFormat dateFormat = new SimpleDateFormat("dd-MM-yyyy");
-        dateFormat.format(date);
-        submissionDate2Input.val(dateFormat.format(date));
+//        DateFormat dateFormat = new SimpleDateFormat("dd-MM-yyyy");
+        DateFormat dateFormat = new SimpleDateFormat("d");
+        String dateFormated = dateFormat.format(date);
 
+        $(By.xpath("//div[text()='"+dateFormated+"']")).click();
+//        submissionDate2Input.val(dateFormated);
+//        submissionDate1Input.sendKeys(Keys.ENTER);
 
-
-    }
-
-    public void exitDatetimeSettingModal(){
-        $(By.xpath("//*")).click();
     }
 
 

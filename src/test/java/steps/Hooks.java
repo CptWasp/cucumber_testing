@@ -11,5 +11,4 @@ public class Hooks {
         open("https://www.rts-tender.ru/");
     }
 
-
 }
