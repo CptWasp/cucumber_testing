@@ -25,7 +25,6 @@ public class NotificationPage {
                         + $(By.xpath("//div[@class='cards'][" + i + "]//div[@class='card-item__properties-desc']")).text());
 
 //                if (i % 10 == 0) {
-////                    $(By.xpath("//a[@class='page-link next']")).scrollTo();
 ////                    $(By.xpath("//a[@class='page-link next']")).click();
 //                    $(By.xpath("//a[@class='page-link next']/parent::*")).click();
 //                    count -= 10;
