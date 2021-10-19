@@ -6,8 +6,6 @@ import pages.ModalPage;
 public class ModalPageDef {
     ModalPage modalPage = new ModalPage();
 
-
-
     @Then("Search")
     public void search(){
         modalPage.search();
@@ -21,7 +19,7 @@ public class ModalPageDef {
 
     @Then("Select region")
     public void selectRegion(){
-        modalPage.selectRegion();
+         modalPage.selectRegion();
     }
 
     @Then("Select true checkboxes")
