@@ -1,0 +1,5 @@
+pages\NotificationPage.class
+pages\SuppliersPage.class
+pages\BasicPage.class
+pages\ModalPage.class
+pages\AdvancedPage.class
