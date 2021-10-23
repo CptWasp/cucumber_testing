@@ -1,7 +1,0 @@
-steps\NotificationPageDef.class
-steps\BasicPageDef.class
-steps\AdvancedPageDef.class
-RunCucunberTest.class
-steps\ModalPageDef.class
-steps\Hooks.class
-steps\SuppliersPageDef.class
